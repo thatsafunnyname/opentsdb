@@ -61,10 +61,10 @@ public final class TSQuery {
   private boolean padding;
   
   /** Whether or not to suppress annotation output */
-  private boolean no_annotations;
+  private boolean no_annotations = true;
   
   /** Whether or not to scan for global annotations in the same time range */
-  private boolean with_global_annotations;
+  private boolean with_global_annotations = false;
 
   /** Whether or not to show TSUIDs when returning data */
   private boolean show_tsuids;
@@ -317,12 +317,12 @@ public final class TSQuery {
 
   /** @return whether or not to supress annotatino output */
   public boolean getNoAnnotations() {
-    return no_annotations;
+    return true;
   }
   
   /** @return whether or not to load global annotations for the time range */
   public boolean getGlobalAnnotations() {
-    return with_global_annotations;
+    return false;
   }
   
   /** @return whether or not to display TSUIDs with the results */
@@ -402,12 +402,12 @@ public final class TSQuery {
 
   /** @param no_annotations whether or not to suppress annotation output */
   public void setNoAnnotations(boolean no_annotations) {
-    this.no_annotations = no_annotations;
+    this.no_annotations = true;
   }
   
   /** @param with_global whether or not to load global annotations */
   public void setGlobalAnnotations(boolean with_global) {
-    with_global_annotations = with_global;
+    with_global_annotations = false;
   }
   
   /** @param show_tsuids whether or not to show TSUIDs in output */
