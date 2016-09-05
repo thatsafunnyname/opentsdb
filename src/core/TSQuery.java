@@ -400,6 +400,7 @@ public final class TSQuery {
     this.padding = padding;
   }
 
+
   /** @param no_annotations whether or not to suppress annotation output */
   public void setNoAnnotations(boolean no_annotations) {
     this.no_annotations = true;
